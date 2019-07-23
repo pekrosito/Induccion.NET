@@ -1,2 +1,2 @@
 # induccionNET
-Repositorio para proyecto MVC bajo entidades
+Repositorio para proyecto MVC bajo EntityFramework
