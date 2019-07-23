@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using InduccionNET.Models;
 
 namespace InduccionNET.Controllers
 {
@@ -16,19 +15,11 @@ namespace InduccionNET.Controllers
 
         public ActionResult About()
         {
-            induccionEntities entity = new induccionEntities();
-            List<person> person = new List<person>();
+            ViewBag.Message = "Your application description page.";
 
-            using (entity)
-            {
-                person = entity.people.ToList();
-            }
-
-          ViewBag.Message = "Your application description page.";
-
-            return View(person);
+            return View();
         }
-      
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

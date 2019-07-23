@@ -33,7 +33,7 @@ namespace InduccionNET.Controllers
             {
                 person = entity.people.Where(entityPerson => entityPerson.id == id).FirstOrDefault();
             }
-            
+
             return View(person);
         }
 
@@ -49,7 +49,7 @@ namespace InduccionNET.Controllers
         {
             try
             {
-                using(induccionEntities entity = new induccionEntities())
+                using (induccionEntities entity = new induccionEntities())
                 {
                     entity.people.Add(collection);
                     entity.SaveChanges();
@@ -91,7 +91,7 @@ namespace InduccionNET.Controllers
 
                 return RedirectToAction("Index");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return View();
             }

@@ -1,33 +1,7 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "About";
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
 <p>Use this area to provide additional information.</p>
-
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-<tbody>
-	  @foreach (var item in @Model)
-	  {
-	      <tr>
-	          <td>@item.name</td>
-	          <td>@item.surname</td>	          
-              <td>
-                  <button class="btnEdit"  onclick="location.href='@Url.Action("Detalle", "Home", new { id = item.id })'">
-                      <span style="font-size:14px">Editar </span>
-                  </button> 
-              </td>
-	      </tr> 
-	  }
-</tbody>
-</table>
-
